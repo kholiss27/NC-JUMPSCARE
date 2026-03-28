@@ -1,22 +1,39 @@
-for i,v in pairs(game.Players:GetPlayers()) do
-   if v.Name ~= me and not v.PlayerGui:FindFirstChild("Screamer") and v:FindFirstChild("PlayerGui") then
-    spawn(function()
-     local newgui = Instance.new("ScreenGui",v.PlayerGui)
-     newgui.Name = "Screamer"
-     local newimage = Instance.new("ImageLabel",newgui)
-     newimage.Image = "http://www.roblox.com/asset/?id= 100814694290748"
-     newimage.Size = UDim2.new(1,1,1,1)
-     local s = Instance.new("Sound",newgui)
-     s.SoundId = "rbxassetid://6607807658"
-     s.Volume = 9999999999999999999999999999999999999
-     s.Looped = true
-     s:Play()
-     print("Screamed "..v.Name)
-     while wait(100) do
- 
-      newimage.Parent:Destroy()
- 
-     end
-    end)
-   end
-  end
+-- // Protected by Monsy Obfuscator
+local qNlDZpLM={"fb491960423124864eab2c4dc60d8e6da755dc552a1399bea6a2f567a3b385b645c9f2e394b7ea15a518938854a1990d046aa24f348b129fc749b530150a5ff99047365e26fd51a22ec759a45e28a2a1c544da22338311f2cd8bcb0a8ddc26b2c77808ee","fdec09c7d308eced9fd798ff84ee3e5c1de209afc1b44381bb4cc2e388d66231511d478f521c881d4f9372ccdc3ee4bce4fb89808881df7d3bf20fd07744ccaaa23283af645be456cfae892b01a0bf96fc60df7c2296c227599159eae98e7d78fd278912","843ed154a782506796897648e3efd05ad22dae623dba50e51dadb7a6b27c072d24663de15c1699f75881c0c4b48bd60534b6de4ca673d980556104fd87d47df47467ef3259ea62738ae1707e162a2fb696ef18b5826cc6eedbeb000ba98b54c662889f4a","853754dc9ee2e6f28a158ff549bcf555350b86e3f8acc5ff7d2b738a82a2ac34634a740d2d7f574389e7c0186b25185364c5bb403dbf2573f8a283c9d58bcc96557bbe083de2fdb2d9322074934c502371ed9e1fb74ed1846cfedef889ed18e8d08b402b","ce86ef9b91dafc4ab186937c900fd6b0f4d4720de7edfc89e1ebe24f3834bba7f4f2ee443d61bc7891e0bbffba21f59923bf2ebcc9d45eacd1e80812321912dd4e7a9948db62c75bf31325fde11179ded12b5b36c5f3f22381a3a8d0c09020306afe84ea","c04c37db39208c5b667685e89086476af4ce4edcc699c8e3c84d451f4c65f87bc5e4bcc154a4d8ea953dfec9c524f4dd245083e82fa050dcdee88822ca122348d873196565d5e8936ce0d6f404b7bb2c79ef44c163679e8f9680dbded4a9cbebb21935b9","387dc01054ecf0f334d49c58b5f268dd803e86e8850185fafa64d9cc09a969df94ec575a7e37c0dd1ca583f226d6110d892c5b93b9e960bc8af080d8dcc75eca72fed2d2cdb5e7e1c6a01290446c4afd12ede2df34673b57f630b9b0efb7a49880a075dc","2ba9a7bcdf06928fd6670f6a65aed0df194f2d27db19f833"}
+local lUxNfqQJX=table.concat(qNlDZpLM)
+local uklr7J_j_sw2D={}
+for MbbYjg=1,#lUxNfqQJX,2 do
+  uklr7J_j_sw2D[#uklr7J_j_sw2D+1]=tonumber(string.sub(lUxNfqQJX,MbbYjg,MbbYjg+1),16)
+end
+local SIwSt5fZfvmO={219,19,226,153,149,62,205,146,76,249,121,105}
+local BhsBAzGJ_1XtCwe={45,158,226,208,201,82,126,81,56,22,43,84}
+for MbbYjg=1,#uklr7J_j_sw2D do
+  uklr7J_j_sw2D[MbbYjg]=bit32.bxor(uklr7J_j_sw2D[MbbYjg],BhsBAzGJ_1XtCwe[(MbbYjg-1)%#BhsBAzGJ_1XtCwe+1])
+end
+local WZdYfC7bbaSMfdX=58522119
+local Y4l8g4dqabCf={}
+local aR8nnDOBN81=WZdYfC7bbaSMfdX
+for vzJ8ISc=#uklr7J_j_sw2D-1,1,-1 do
+  aR8nnDOBN81=(aR8nnDOBN81*1664525+1013904223)%4294967296
+  local PplF2LplP=aR8nnDOBN81%(vzJ8ISc+1)+1
+  Y4l8g4dqabCf[#Y4l8g4dqabCf+1]={vzJ8ISc+1,PplF2LplP}
+end
+for MbbYjg=#Y4l8g4dqabCf,1,-1 do
+  j3vGPSVA=Y4l8g4dqabCf[MbbYjg]
+  local wZHDJZs=uklr7J_j_sw2D[j3vGPSVA[1]]
+  uklr7J_j_sw2D[j3vGPSVA[1]]=uklr7J_j_sw2D[j3vGPSVA[2]]
+  uklr7J_j_sw2D[j3vGPSVA[2]]=wZHDJZs
+end
+local IMbKxWrxnx={}
+for MbbYjg=1,#uklr7J_j_sw2D do
+  IMbKxWrxnx[MbbYjg]=string.char(bit32.bxor(uklr7J_j_sw2D[MbbYjg],SIwSt5fZfvmO[(MbbYjg-1)%#SIwSt5fZfvmO+1]))
+end
+local pJfrBLmPZ59=table.concat(IMbKxWrxnx)
+if false then local PYXIqjTt=math.random() end
+local YnUULvtj=nil
+local SkT09DmRBEn,BMWmJsTNYB5=loadstring(pJfrBLmPZ59)
+if SkT09DmRBEn then
+  SkT09DmRBEn()
+else
+  error(" x01337 | // @ Monsy | Public Enemy : "..tostring(BMWmJsTNYB5))
+end
